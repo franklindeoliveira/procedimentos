@@ -160,6 +160,154 @@ URL: jdbc:mysql://localhost:3306/fkn_identity
 Driver: com.mysql.jdbc.Driver
 
 
+
+== INI ==
+
+SQL Server:
+
+Listagem das tabelas:
+SELECT name FROM dbo.sysobjects WHERE type = 'U';
+
+Listagem das procedures:
+SELECT name FROM dbo.sysobjects WHERE type = 'P';
+
+Schema das tabelas:
+SELECT * FROM INFORMATION_SCHEMA.TABLES;
+TABLE_CATALOG	TABLE_SCHEMA	TABLE_NAME	TABLE_TYPE
+BD-DCARE-DEV01	dbo	TBDCAGD_ETAPA_PROCESSO	BASE TABLE
+
+Schema das procedures:
+SELECT * FROM INFORMATION_SCHEMA.ROUTINES;
+
+Oracle:
+
+SELECT table_name  from all_tables where owner = 'DATACARE';
+SELECT object_name  from all_procedures where owner = 'DATACARE';
+
+
+
+== FIM ==
+
+== INI ==
+
+Owner dos objetos
+
+Oracle:
+SELECT TABLE_NAME, OWNER FROM ALL_TABLES;
+SELECT OBJECT_NAME, OWNER FROM ALL_PROCEDURES;
+SELECT SEQUENCE_NAME, SEQUENCE_OWNER FROM ALL_SEQUENCES;
+
+== FIM ==
+
+== INI ==
+
+Configura o NOCOUNT no banco SQL Server:
+
+-- CONFIGURA ONCOUNT = ON
+EXEC sys.sp_configure'user options','512'
+RECONFIGURE
+
+-- CONFIGURA ONCOUNT = OFF
+EXEC sys.sp_configure'user options','0'
+RECONFIGURE
+
+-- RUN_VALUE = 0   => ONCOUNT = OFF
+-- RUN_VALUE = 512 => ONCOUNT = ON
+EXEC sys.sp_configure'user options';
+
+== INI ==
+
+Conectar no banco Oracle via SQLPLUS no Windows:
+
+sqlplus DTCPJUSER/DTCPJUSER@'(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=dbmsl01)(Port=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))'
+
+sqlplus system@'(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=localhost)(Port=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))'
+
+== FIM ==
+
+== INI ==
+
+Oracle - Imprimir variavel na saida:
+
+SET SERVEROUTPUT ON;
+DECLARE 
+  VARIAVEL NUMERIC(10);
+BEGIN
+
+dbms_output.put_line('Franklin' || ' de ' || 'Oliveira');
+
+COMMIT;
+END;
+/
+
+Exemplo:
+
+SET SERVEROUTPUT ON;
+DECLARE 
+  v_MAX_ID_COLUNA NUMERIC(10);
+BEGIN
+SELECT NVL(MAX(ID_COLUNA),0) + 1 INTO v_MAX_ID_COLUNA FROM TABELA;
+dbms_output.put_line('Franklin' || v_MAX_ID_COLUNA);
+
+COMMIT;
+END;
+/
+
+
+== FIM ==
+
+== INI ==
+
+Encoding banco Oracle:
+
+Windows:
+set NLS_LANG=American_America.WE8ISO8859P1​
+
+Linux / Unix:
+export NLS_LANG=American_America.WE8ISO8859P1​
+
+Ref.:
+http://www.orafaq.com/wiki/NLS_LANG
+
+== FIM ==
+
+
+== INI ==
+
+SQL Server:
+
+-- disable all constraints and triggers
+EXEC sp_MSforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT all"
+EXEC sp_MSforeachtable "ALTER TABLE ? DISABLE TRIGGER all"
+
+-- enable all constraints and triggers
+EXEC sp_MSforeachtable @command1="print '?'", @command2="ALTER TABLE ? CHECK CONSTRAINT all"
+EXEC sp_MSforeachtable @command1="print '?'", @command2="ALTER TABLE ? ENABLE TRIGGER  all"
+
+== FIM ==
+
+== INI ==
+
+Execucao de scripts:
+
+Oracle:
+sqlplus <user>@'(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=<host>)(Port=<port>))(CONNECT_DATA=(SERVICE_NAME=<sid>)))'
+
+SQL Server:
+SQLCMD -S <host>\<instancia>,<port> -U <user> -d <database> -i script.sql -o execucao.log
+
+MySQL:
+mysql -h <host> -u <user> -p <database> -v --default-character-set=latin1 < script.sql > execucao.log
+
+== FIM ==
+
+== INI ==
+
+ALTER USER <user> IDENTIFIED BY <new_password>
+
+== FIM ==
+
+
 ##  Comandos Linux e Windows
 
 Linux
@@ -211,6 +359,122 @@ ipconfig /flushdns
 
 == INI ==
 
+Terminador de linha:
+Linux: cat -A <arquivo>
+Windows: 
+
+== FIM ==
+
+== INI ==
+Cópia remota de arquivos:
+scp -rp /tmp/diretorio@<host-remoto>:/tmp
+== FIM ==
+
+== INI ==
+
+Verificação da versão do Linux (32 ou 64 bits):
+
+arch
+
+32-bit ("i686" or "i386")
+64-bit ("x86_64")
+
+Verificação da versão do Windows (32 ou 64 bits):
+
+wmic OS get OSArchitecture
+
+== FIM ==
+
+== INI ==
+
+Help de comandos
+
+Exemplos:
+
+linux:
+cd --help
+
+windows:
+help dir
+
+== FIM ==
+
+
+== INI ==
+
+systemctl -t service
+sudo journalctl -u datacare-executor-prd
+systemctl status <nome servico>.service
+
+== FIM ==
+
+== INI ==
+
+Localização dos arquivos de configuração dos serviços:
+/etc/systemd/system/
+
+== FIM ==
+
+
+
+== INI ==
+
+Comparação de arquivos no Windows:
+
+FC arquivo1.txt arquivo2.txt
+
+Comparação de arquivos no Linux:
+
+diff arquivo1.txt arquivo2.txt
+
+== FIM ==
+
+== INI ==
+
+Espaço em disco: WinDirStat
+
+== FIM ==
+
+== INI ==
+
+Informações do SO linux:
+lsb_release -a
+cat /etc/os-release
+hostnamectl
+
+== FIM ==
+
+== INI ==
+
+Localização do Java
+
+Windows:
+where java
+
+== FIM ==
+
+== INI ==
+
+Mémória disponível:
+free -m
+
+== FIM ==
+
+== INI ==
+
+uptime
+
+== FIM ==
+
+== INI ==
+
+Versão do Java:
+
+java -d32 -version
+java -d64 -version
+
+== FIM ==
+
 ## Referências de linguagens de programação
 
 Linguagem C:
@@ -221,3 +485,35 @@ https://docs.oracle.com/en/java/javase/index.html
 
 Linguagem JavaScript:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+# Categorizar
+
+- Consumir API REST/SOAP - Pesquisar servico online
+
+== INI ==
+
+Apagar conteúdo de arquivo:
+
+break > arquivo.txt
+
+== FIM ==
+
+== INI ==
+
+Analisar simbolos:
+Comando: objdump
+
+== FIM ==
+
+== INI ==
+Simbolos de um .so:
+nm -g arquivo.so
+
+== FIM ==
+
+== INI ==
+
+Java Decompiler:
+http://jd.benow.ca/
+
+== FIM ==
