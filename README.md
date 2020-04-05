@@ -1,6 +1,6 @@
 # Procedimentos
 
-Procedimentos gerais sobre scripts/comandos Windows/Linux, gerenciamento de BDs, programação, entre outros
+Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenciamento de BDs, programação, entre outros
 
 ## Gerenciamento do banco de dados
 
@@ -211,3 +211,13 @@ ipconfig /flushdns
 
 == INI ==
 
+## Referências de linguagens de programação
+
+Linguagem C:
+http://www.cplusplus.com/reference/clibrary/
+
+Linguagem Java:
+https://docs.oracle.com/en/java/javase/index.html
+
+Linguagem JavaScript:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
