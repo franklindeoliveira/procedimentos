@@ -1,7 +1,8 @@
-# procedimentos
+# Procedimentos
+
 Procedimentos gerais sobre scripts/comandos Windows/Linux, gerenciamento de BDs, programação, entre outros
 
-Gerenciamento do banco de dados
+## Gerenciamento do banco de dados
 
 Criar banco: 
 Criar usuário: 
@@ -135,3 +136,56 @@ WHERE DBName = 'DWMYHONDAPRD';
 
 
 == FIM ==
+
+
+##  Comandos Linux e Windows
+
+Linux
+
+Aplica dos2unix recursivamente no diretorio {dir}:
+find {dir} -type f -print0 | xargs -0 dos2unix
+
+G-zip
+Compactação:
+tar -vczf arquivo.tar.gz diretorio
+
+Extração:
+tar -vxzf arquivo.tar.gz
+
+Charset de arquivo:
+file -I arquivo.txt
+arquivo.txt: text/plain; charset=iso-8859-1
+
+Verificar espaço em disco no Linux:
+df -hs
+
+Conversão de encode:
+iconv -f iso-8859-1 -t utf-8 arquivo.txt > arquivo_novo.txt
+
+IPs de um DNS:
+nslookup <dns>
+
+Comando curl para requisição HTTP POST:
+curl -H "Content-Type: application/json" -X POST -d '{"nomCliente": "ANTONIA ANGELA DE ASSIS", "tipoPessoa": "FIS", "numCpfCnpj": "5556732272", "dscEmail": "teste@teste.com"}' http://10.40.11.14:8280/CustomerHSF/retrieveCustomerHSF
+
+Tamanho de arquivo:
+myfilesize=$(du -b arquivo.txt | cut -f1)
+echo $myfilesize
+
+Windows
+
+Copiar arquivos/pastas de D:\ para W:\ :
+robocopy D:\ W:\ /e /r:1 /w:1
+
+== INI ==
+
+Executar script sem sair do CMD
+cmd /k script.bat
+
+== FIM ==
+
+Limpar o cache DNS:
+ipconfig /flushdns
+
+== INI ==
+
