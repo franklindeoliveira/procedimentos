@@ -517,3 +517,26 @@ Java Decompiler:
 http://jd.benow.ca/
 
 == FIM ==
+
+== INI ==
+
+== INI ==
+
+Estrutura WSDL
+
+<wsdl:definitions>
+    <wsdl:types>...</wsdl:types>
+    <wsdl:message>...</wsdl:message>
+    <wsdl:portType>...</wsdl:portType>
+    <wsdl:binding>...</wsdl:binding>
+    <wsdl:service>...</wsdl:service>
+</wsdl:definitions>
+
+Relações:
+
+<wsdl:service> ==> <wsdl:binding> ==> <wsdl:portType>  ==> <wsdl:message>   ⇒ <wsdl:message>
+
+== FIM ==
+
+
+== FIM ==
