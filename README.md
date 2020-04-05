@@ -137,6 +137,28 @@ WHERE DBName = 'DWMYHONDAPRD';
 
 == FIM ==
 
+URLs e drivers JDBC
+
+SQL Server:
+URL: jdbc:sqlserver://10.148.202.224:1433;DatabaseName=SAHSADQQAS;SelectedMethod=Cursor
+Driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+JTDS:
+URL: jdbc:jtds:sqlserver://SRVCCAA:1433;databaseName=CCAA_MDM;SelectMethod=cursor
+Driver: net.sourceforge.jtds.jdbc.Driver
+
+PostgreSQL:
+URL: jdbc:postgresql://dbmsl01:5432/eou@.'\"*+=|][(){}$&!#%/:,;
+Driver: org.postgresql.Driver
+
+Oracle:
+URL: 
+Driver: oracle.jdbc.driver.OracleDriver
+
+MySQL:
+URL: jdbc:mysql://localhost:3306/fkn_identity
+Driver: com.mysql.jdbc.Driver
+
 
 ##  Comandos Linux e Windows
 
