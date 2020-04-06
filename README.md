@@ -475,6 +475,16 @@ java -d64 -version
 
 == FIM ==
 
+== INI ==
+
+Portas em uso:
+netstat -anp | grep 8787
+
+PID na última coluna
+
+== FIM ==
+
+
 ## Referências de linguagens de programação
 
 Linguagem C:
