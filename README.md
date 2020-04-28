@@ -20,6 +20,13 @@ mysqladmin -u root -p<OLDPASSWORD> password <NEWPASSWORD>
 
 == FIM ==
 
+== INI ==
+
+Versao do Oracle:
+SELECT * FROM V$VERSION;
+
+== FIM ==
+
 mongodump --host localhost --port 27017 --authenticationDatabase datacare --collection relatorio --db datacare --out D:\Assesso\backup\mongodump201811281059
 
 db.collection.remove({})
