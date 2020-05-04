@@ -12,6 +12,20 @@ Backup:
 Restore: 
 
 == INI ==
+MySQL
+
+indices de uma tabela:
+show index from <table>;
+
+variaveis:
+SHOW VARIABLES LIKE '%timeout%';
+
+tabelas em uso:
+show open tables where in_use > 0;
+
+== FIM ==
+
+== INI ==
 
 Alterar senha do usuário administrador do banco de dados
 
