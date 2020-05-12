@@ -12,6 +12,18 @@ Backup:
 Restore: 
 
 == INI ==
+
+Oracle
+
+BEGIN
+  -- Disable the web interface
+  DBMS_XDB.SETHTTPPORT(0);
+  -- Disable FTP just in case
+  DBMS_XDB.SETFTPPORT(0);
+END;
+== FIM ==
+
+== INI ==
 MySQL
 
 indices de uma tabela:
