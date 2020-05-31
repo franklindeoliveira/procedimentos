@@ -4,12 +4,35 @@ Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenci
 
 ## Gerenciamento do banco de dados
 
-Criar banco: 
-Criar usuário: 
-Iniciar: 
-Parar: 
-Backup: 
-Restore: 
+**MySQL**
+
+* Iniciar (Windows): `` mysqld --defaults-file="C:\ProgramData\MySQL\MySQL Server 5.7\my.ini" --console ``
+* Parar: `` mysqladmin -u root -p shutdown ``
+* Backup: `` mysqldump -h <host> -u <usuario> -p <banco> --routines --events > <backup>.sql ``
+* Restore: `` mysql -h <host> -u <usuario> -P <porta> -p --protocol=TCP < <backup>.sql ``
+
+* Criar banco: `` CREATE DATABASE <banco>; ``
+* Criar usuário: `` CREATE USER '<usuario>'@'%' IDENTIFIED BY '<senha>'; `` 
+* Privilégios para o usuário: `` GRANT ALL PRIVILEGES ON <banco>.* TO '<usuario>'@'%'; FLUSH PRIVILEGES; ``
+* Login no banco: `` mysql -h <host> -u <usuario> -P <porta> -p --protocol=TCP <banco> ``
+
+**PostgreSQL**
+
+* Iniciar: `` C:\Program Files\PostgreSQL\9.6\bin>pg_ctl -D "C:\Program Files\PostgreSQL\9.6\data" start ``
+* Parar: `` C:\Program Files\PostgreSQL\9.6\bin>pg_ctl -D "C:\Program Files\PostgreSQL\9.6\data" stop ``
+* Backup: `` "C:\Program Files\PostgreSQL\9.6\bin\pg_dump.exe" --file "D:\\foliveira\\Ferramentas para Dashboard\\Pentaho\\pentaho-dashboards-examples\\pentaho_cde_demo.sql" --host "localhost" --port "5432" --username "postgres" --no-password --verbose --format=p "pentaho_cde_demo" ``
+* Restore: `` "C:\Program Files\PostgreSQL\9.6\bin\pg_restore.exe" --host "localhost" --port "5432" --username "postgres" --no-password --dbname "foodmart" --verbose "D:\foliveira\Ferramentas para Dashboard\Pentaho\pentaho-dashboards-examples\foodmart.backup" ``
+
+**MongoDB**
+
+* Backup: `` mongodump --host localhost --port 27017 --authenticationDatabase datacare --collection relatorio --db datacare --out D:\Assesso\backup\mongodump201811281059 ``
+* Login no banco: `` mongo --username datacare_dev --password --authenticationDatabase datacare_dev --host localhost --port 27017 ``
+* Remover coleção: db.collection.remove({})
+
+**SQL Server**
+
+**Oracle**
+
 
 == INI ==
 
@@ -52,26 +75,6 @@ Versao do Oracle:
 SELECT * FROM V$VERSION;
 
 == FIM ==
-
-mongodump --host localhost --port 27017 --authenticationDatabase datacare --collection relatorio --db datacare --out D:\Assesso\backup\mongodump201811281059
-
-db.collection.remove({})
-
-mongo --username datacare_dev --password --authenticationDatabase datacare_dev --host localhost --port 27017
-
-Banco de dados PostgreSQL:
-
-Backup PostgreSQL:
-"C:\Program Files\PostgreSQL\9.6\bin\pg_dump.exe" --file "D:\\foliveira\\Ferramentas para Dashboard\\Pentaho\\pentaho-dashboards-examples\\pentaho_cde_demo.sql" --host "localhost" --port "5432" --username "postgres" --no-password --verbose --format=p "pentaho_cde_demo"
-
-Restore PostgreSQL:
-"C:\Program Files\PostgreSQL\9.6\bin\pg_restore.exe" --host "localhost" --port "5432" --username "postgres" --no-password --dbname "foodmart" --verbose "D:\foliveira\Ferramentas para Dashboard\Pentaho\pentaho-dashboards-examples\foodmart.backup"
-
-Start:
-C:\Program Files\PostgreSQL\9.6\bin>pg_ctl -D "C:\Program Files\PostgreSQL\9.6\data" start
-
-Stop:
-C:\Program Files\PostgreSQL\9.6\bin>pg_ctl -D "C:\Program Files\PostgreSQL\9.6\data" stop
 
 == INI ==
 
