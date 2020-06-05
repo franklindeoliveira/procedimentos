@@ -346,6 +346,13 @@ ALTER USER <user> IDENTIFIED BY <new_password>
 
 ##  Comandos Linux e Windows
 
+== INI == 
+
+Lista de error codes/level Linux e Windows
+https://mariadb.com/kb/en/operating-system-error-codes/
+
+== FIM ==
+
 Linux
 
 Aplica dos2unix recursivamente no diretorio {dir}:
