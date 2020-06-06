@@ -346,25 +346,27 @@ ALTER USER <user> IDENTIFIED BY <new_password>
 
 ##  Comandos Linux e Windows
 
-== INI ==
 
+== INI ==
+Alterar hostname Ubuntu:
+sudo hostnamectl set-hostname novohostname
+/etc/hosts => 127.0.0.1 novohostname
+== FIM ==
+
+== INI ==
 Gerenciamento Servidor Linux:
 sudo reboot
 sudo shutdown
-
 == FIM ==
 
 == INI ==
-
 /etc/hosts
 C:\Windows\System32\drivers\etc\hosts
-
 == FIM ==
-== INI == 
 
+== INI == 
 Lista de error codes/level Linux e Windows
 https://mariadb.com/kb/en/operating-system-error-codes/
-
 == FIM ==
 
 Linux
