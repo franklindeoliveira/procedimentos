@@ -346,6 +346,12 @@ ALTER USER <user> IDENTIFIED BY <new_password>
 
 ##  Comandos Linux e Windows
 
+== INI ==
+
+/etc/hosts
+C:\Windows\System32\drivers\etc\hosts
+
+== FIM ==
 == INI == 
 
 Lista de error codes/level Linux e Windows
