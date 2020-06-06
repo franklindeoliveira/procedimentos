@@ -348,6 +348,14 @@ ALTER USER <user> IDENTIFIED BY <new_password>
 
 == INI ==
 
+Gerenciamento Servidor Linux:
+sudo reboot
+sudo shutdown
+
+== FIM ==
+
+== INI ==
+
 /etc/hosts
 C:\Windows\System32\drivers\etc\hosts
 
