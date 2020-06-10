@@ -367,6 +367,8 @@ C:\Windows\System32\drivers\etc\hosts
 == INI == 
 Lista de error codes/level Linux e Windows
 https://mariadb.com/kb/en/operating-system-error-codes/
+https://tldp.org/LDP/abs/html/exitcodes.html
+
 == FIM ==
 
 Linux
