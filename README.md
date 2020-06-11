@@ -353,6 +353,11 @@ ALTER USER <user> IDENTIFIED BY <new_password>
 
 ##  Comandos Linux e Windows
 
+== INI ==
+
+https://regexr.com/
+
+== FIM ==
 
 == INI ==
 Alterar hostname Ubuntu:
