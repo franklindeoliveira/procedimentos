@@ -34,6 +34,13 @@ Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenci
 **Oracle**
 
 
+## Propriedades JDBC de conexão
+
+* SQL Server: https://docs.microsoft.com/en-us/sql/connect/jdbc/setting-the-connection-properties?view=sql-server-ver15
+* MySQL: 
+* PostgreSQL: 
+* Oracle: 
+
 == INI ==
 
 Oracle
