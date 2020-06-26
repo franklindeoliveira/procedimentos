@@ -517,6 +517,7 @@ hostnamectl
 
 Informações do SO windows:
 systeminfo
+wmic OS get FreePhysicalMemory /Value
 
 == FIM ==
 
