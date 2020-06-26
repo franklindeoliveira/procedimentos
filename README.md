@@ -515,6 +515,9 @@ lsb_release -a
 cat /etc/os-release
 hostnamectl
 
+Informações do SO windows:
+systeminfo
+
 == FIM ==
 
 == INI ==
