@@ -460,6 +460,14 @@ wmic OS get OSArchitecture
 
 == INI ==
 
+Processos Windows:
+wmic process list
+wmic process get ProcessId,Description,ParentProcessId,ReadOperationCount,WriteOperationCount
+
+== FIM ==
+
+== INI ==
+
 Help de comandos
 
 Exemplos:
