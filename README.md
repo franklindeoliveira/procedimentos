@@ -227,7 +227,9 @@ Oracle:
 SELECT table_name  from all_tables where owner = 'DATACARE';
 SELECT object_name  from all_procedures where owner = 'DATACARE';
 
-
+MySQL:
+SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '<schema>';
+SELECT * FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINES_SCHEMA = '<schema>';
 
 == FIM ==
 
