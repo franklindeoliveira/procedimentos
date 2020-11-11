@@ -356,6 +356,11 @@ ALTER USER <user> IDENTIFIED BY <new_password>
 ##  Comandos Linux e Windows
 
 == INI ==
+Calcular UMAK no Linux:
+https://wintelguy.com/umask-calc.pl
+== FIM ==
+
+== INI ==
 
 https://regexr.com/
 
