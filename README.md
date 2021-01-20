@@ -329,6 +329,14 @@ EXEC sp_MSforeachtable "ALTER TABLE ? DISABLE TRIGGER all"
 EXEC sp_MSforeachtable @command1="print '?'", @command2="ALTER TABLE ? CHECK CONSTRAINT all"
 EXEC sp_MSforeachtable @command1="print '?'", @command2="ALTER TABLE ? ENABLE TRIGGER  all"
 
+MySQL:
+
+-- disable
+SET FOREIGN_KEY_CHECKS=0;
+-- enable
+SET FOREIGN_KEY_CHECKS=1;
+
+
 == FIM ==
 
 == INI ==
