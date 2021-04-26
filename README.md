@@ -391,6 +391,13 @@ sudo shutdown
 C:\Windows\System32\drivers\etc\hosts
 == FIM ==
 
+== INI ==
+
+mklink /d <Link> <Destino>
+Dessa maneira é possível acessar o <Destino> da seguinte forma: cd <Link>
+
+== FIM ==
+
 == INI == 
 Lista de error codes/level Linux e Windows
 https://mariadb.com/kb/en/operating-system-error-codes/
