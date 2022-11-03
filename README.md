@@ -693,6 +693,8 @@ WildFly - habilitar log das requisicoes:
 
 == INI ==
 
+Procedure Oracle
+	
 CREATE TABLE tabela1 (codigo varchar(10), valor numeric(5))
 INSERT INTO tabela1 VALUES ('codigo1', 0)
 
