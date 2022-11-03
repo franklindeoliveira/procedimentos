@@ -689,3 +689,34 @@ WildFly - habilitar log das requisicoes:
         </subsystem>
 
 == FIM ==
+
+
+== INI ==
+
+CREATE TABLE tabela1 (codigo varchar(10), valor numeric(5))
+INSERT INTO tabela1 VALUES ('codigo1', 0)
+
+CREATE OR REPLACE PROCEDURE exemplo_procedure(
+  vl_codigo IN VARCHAR(10),
+  vl_retorno OUT NUMERIC(5)
+)
+AS
+BEGIN
+	
+  UPDATE tabela1
+  SET valor = valor + 1
+  WHERE codigo = vl_codigo;
+
+  SELECT valor INTO vl_retorno
+  FROM tabela1
+  WHERE codigo = vl_codigo;
+ 
+END;
+
+DECLARE
+  vl_retorno NUMERIC(5);
+BEGIN
+  exemplo_procedure('codigo1', vl_retorno);
+END;
+
+== FIM ==
