@@ -309,6 +309,13 @@ Windows:
 set NLS_LANG=American_America.WE8ISO8859P1​
 
 Linux / Unix:
+
+== INI ==
+sudo localedef -c -i en_US -f ISO-8859-1 en_US.iso88591
+== FIM ==
+
+== INI ==
+
 export NLS_LANG=American_America.WE8ISO8859P1​
 
 Ref.:
