@@ -729,3 +729,7 @@ BEGIN
 END;
 
 == FIM ==
+
+== INI ==
+sudo ln -sf /mnt/c/Users/foliveira/.m2 ~/
+== FIM ==
