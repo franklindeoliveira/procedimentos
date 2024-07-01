@@ -146,6 +146,25 @@ Oracle:
 
 == FIM ==
 
+== INI ==
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "projeto",
+      "request": "attach",
+      "hostName": "172.0.0.1",
+      "port": 8080
+    }
+  ]
+}
+
+== FIM ==
+
 Comandos SQL
 
 ALTER TABLE table_name  RENAME TO new_table_name;
