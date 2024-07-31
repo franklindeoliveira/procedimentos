@@ -25,8 +25,8 @@ Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenci
 
 **MongoDB**
 
-* Backup: `` mongodump --host localhost --port 27017 --authenticationDatabase datacare --collection relatorio --db datacare --out D:\Assesso\backup\mongodump201811281059 ``
-* Login no banco: `` mongo --username datacare_dev --password --authenticationDatabase datacare_dev --host localhost --port 27017 ``
+* Backup: `` mongodump --host localhost --port 27017 --authenticationDatabase seudatabase --collection relatorio --db seudatabase --out D:\backup\mongodump201811281059 ``
+* Login no banco: `` mongo --username seuusername --password --authenticationDatabase seudatabase --host localhost --port 27017 ``
 * Remover coleção: db.collection.remove({})
 
 **SQL Server**
@@ -243,8 +243,8 @@ SELECT * FROM INFORMATION_SCHEMA.ROUTINES;
 
 Oracle:
 
-SELECT table_name  from all_tables where owner = 'DATACARE';
-SELECT object_name  from all_procedures where owner = 'DATACARE';
+SELECT table_name  from all_tables where owner = '<owner>';
+SELECT object_name  from all_procedures where owner = 'owner';
 
 MySQL:
 SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '<schema>';
@@ -532,7 +532,7 @@ help dir
 == INI ==
 
 systemctl -t service
-sudo journalctl -u datacare-executor-prd
+sudo journalctl -u <nome servico>
 systemctl status <nome servico>.service
 
 == FIM ==
