@@ -609,6 +609,11 @@ java -d64 -version
 == FIM ==
 
 == INI ==
+Replace:
+grep -rl "8580" --include \*.properties . | xargs sed -i 's/8580/8480/g'
+== FIM ==
+
+== INI ==
 
 Portas em uso:
 netstat -anp | grep 8787
