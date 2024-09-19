@@ -8,7 +8,7 @@ Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenci
 
 * Iniciar (Windows): `` mysqld --defaults-file="C:\ProgramData\MySQL\MySQL Server 5.7\my.ini" --console ``
 * Parar: `` mysqladmin -u root -p shutdown ``
-* Backup: `` mysqldump -h <host> -u <usuario> -p <banco> --routines --events > <backup>.sql ``
+* Backup: `` mysqldump -h <host> -u <usuario> -p <banco> --routines --events --ignore-table=<scheme>.<tabela> > <backup>.sql ``
 * Restore: `` mysql -h <host> -u <usuario> -P <porta> -p --protocol=TCP < <backup>.sql ``
 
 * Criar banco: `` CREATE DATABASE <banco>; ``
