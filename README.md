@@ -440,6 +440,8 @@ G-zip
 Compactação:
 tar -vczf arquivo.tar.gz diretorio
 
+tar -czvf /tmp/wildfly-37.0.0.Final.tar.gz -C /opt/srvs wildfly-37.0.0.Final --exclude='wildfly-37.0.0.Final/*/tmp' --exclude='wildfly-37.0.0.Final/*/data' --exclude='wildfly-37.0.0.Final/*/log'
+
 Extração:
 tar -vxzf arquivo.tar.gz
 
