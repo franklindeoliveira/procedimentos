@@ -624,7 +624,7 @@ netstat -anp | grep 8787
 
 PID na última coluna
 
-nmap -Pn -p 22,389 <ip>
+nmap -Pn -p 22,389 ip
 == FIM ==
 
 
