@@ -12,13 +12,14 @@ sudo systemctl enable nginx
 
 Listar discos:
 sudo sfdisk -l
+sudo lsblk
 
 Listar filesystem:
 df -h
 
-Particionamento: sudo fdisk /dev/xvfd
+Particionamento: sudo fdisk /dev/xvfd, onde /dev/xvfd é o disco a ser particionado
 
-Formatação (criar file system): sudo mkfs.ext4 /dev/xvdf1
+Formatação (criar file system): sudo mkfs.ext4 /dev/xvdf1, onde /dev/xvdf1 é a partição criada anteriormente
 
 Montagem:
 sudo mkdir /mnt/data
