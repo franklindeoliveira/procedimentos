@@ -10,9 +10,7 @@ sudo apt-get install nginx
 sudo systemctl status nginx
 sudo systemctl enable nginx
 
-Listar discos:
-sudo sfdisk -l
-sudo lsblk
+Listar discos: sudo sfdisk -l, sudo lsblk -f
 
 Listar filesystem:
 df -h
