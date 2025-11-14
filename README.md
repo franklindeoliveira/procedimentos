@@ -10,6 +10,20 @@ sudo apt-get install nginx
 sudo systemctl status nginx
 sudo systemctl enable nginx
 
+Listar discos:
+sudo sfdisk -l
+
+Listar filesystem:
+df -h
+
+Particionamento: sudo fdisk /dev/xvfd
+
+Formatação (criar file system): sudo mkfs.ext4 /dev/xvdf1
+
+Montagem:
+sudo mkdir /mnt/data
+sudo mount /dev/xvdf1 /mnt/data/
+
 ## Gerenciamento do banco de dados
 
 **MySQL**
