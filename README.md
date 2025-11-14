@@ -2,6 +2,11 @@
 
 Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenciamento de BDs, programação, entre outros
 
+## nginx
+
+**Ubuntu**
+sudo apt-get install nginx
+
 ## Gerenciamento do banco de dados
 
 **MySQL**
