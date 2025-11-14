@@ -5,7 +5,10 @@ Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenci
 ## nginx
 
 **Ubuntu**
+
 sudo apt-get install nginx
+sudo systemctl status nginx
+sudo systemctl enable nginx
 
 ## Gerenciamento do banco de dados
 
