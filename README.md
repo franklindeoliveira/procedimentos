@@ -44,6 +44,9 @@ sudo mount /dev/xvdf1 /mnt/data/
 * Backup: `` "C:\Program Files\PostgreSQL\9.6\bin\pg_dump.exe" --file "D:\\foliveira\\Ferramentas para Dashboard\\Pentaho\\pentaho-dashboards-examples\\pentaho_cde_demo.sql" --host "localhost" --port "5432" --username "postgres" --no-password --verbose --format=p "pentaho_cde_demo" ``
 * Restore: `` "C:\Program Files\PostgreSQL\9.6\bin\pg_restore.exe" --host "localhost" --port "5432" --username "postgres" --no-password --dbname "foodmart" --verbose "D:\foliveira\Ferramentas para Dashboard\Pentaho\pentaho-dashboards-examples\foodmart.backup" ``
 
+* Instalação client no Debian: sudo apt install postgresql-client
+* Conectar: psql -U <user> -W -h <host>
+
 **MongoDB**
 
 * Backup: `` mongodump --host localhost --port 27017 --authenticationDatabase seudatabase --collection relatorio --db seudatabase --out D:\backup\mongodump201811281059 ``
