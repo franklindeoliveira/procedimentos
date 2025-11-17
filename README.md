@@ -4,9 +4,10 @@ Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenci
 
 ## SSH
 
-Carregar o agent ssh (Ubuntu): eval "$(ssh-agent -s)"
-ssh via chave (openssh nao putty): ssh -i chave.pem
-
+Carregar o agent ssh e adicionar chave no agent:
+- eval "$(ssh-agent -s)"
+- ssh-add ~/.ssh/chave.pem
+- ssh -i ~/.ssh/chave.pem
 
 ## nginx
 
