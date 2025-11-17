@@ -2,6 +2,12 @@
 
 Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenciamento de BDs, programação, entre outros
 
+## SSH
+
+Carregar o agent ssh (Ubuntu): eval "$(ssh-agent -s)"
+ssh via chave (openssh nao putty): ssh -i chave.pem
+
+
 ## nginx
 
 **Ubuntu**
