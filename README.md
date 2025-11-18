@@ -2,6 +2,14 @@
 
 Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenciamento de BDs, programação, entre outros
 
+## AWS
+
+**CLI**
+- Criar o access key de um usuário IAM na AWS
+- Na máquina que irá usar o CLI fazer login com esse access key: aws configure
+- Com isso o access key será armazenado em: ~/.aws/credentials
+- Após isso já é possível usar o CLI, por exemplo: aws s3 ls
+
 ## SSH
 
 Carregar o agent ssh e adicionar chave no agent:
