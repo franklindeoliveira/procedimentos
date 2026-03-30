@@ -2,6 +2,12 @@
 
 Procedimentos gerais e referencias sobre scripts/comandos Windows/Linux, gerenciamento de BDs, programação, entre outros
 
+## WSL
+wsl --list
+wsl --export Ubuntu ubuntu.tar.gz
+wsl --unregister Ubuntu
+wsl --import Ubuntu d:\ d:\ubuntu.tar.gz
+
 ## AWS
 
 **CLI**
